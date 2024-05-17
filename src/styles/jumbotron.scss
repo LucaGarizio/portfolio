@@ -1,0 +1,39 @@
+header {
+	background-image: url("../assets/bg-image.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	font-size: 18px;
+	height: 100vh;
+	h1 {
+		font-size: 50px;
+		color: white;
+	}
+}
+
+.fa-solid {
+	bottom: 50px;
+	font-size: 40px;
+	animation: up-down 2s infinite ease-in-out;
+}
+
+@keyframes up-down {
+	50% {
+		bottom: 30px;
+	}
+	100% {
+		bottom: 50px;
+	}
+}
+.animated-arrow {
+	animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

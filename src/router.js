@@ -6,9 +6,7 @@ import FrontEnd from "./pages/FrontEnd.vue";
 import BackEnd from "./pages/BackEnd.vue";
 import Contact from "./pages/Contact.vue";
 import Info from "./pages/Info.vue";
-
-import Boolflix from "./pages/project-pages/Boolflix.vue";
-import Deliveboo from "./pages/project-pages/Deliveboo.vue";
+import ProjectDetails from "./pages/ProjectDetail.vue";
 
 // utilizzo funzione router
 const router = createRouter({
@@ -46,17 +44,10 @@ const router = createRouter({
 			name: "info",
 			component: Info,
 		},
-
-		// project route pages
 		{
-			path: "/projects/boolflix",
-			name: "boolflix",
-			component: Boolflix,
-		},
-		{
-			path: "/projects/deliveboo",
-			name: "deliveboo",
-			component: Deliveboo,
+			path: "/projects/:name",
+			name: "project",
+			component: ProjectDetails,
 		},
 	],
 	scrollBehavior(to, from, savedPosition) {

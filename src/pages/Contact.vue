@@ -1,5 +1,5 @@
 <template>
-	<main>
+	<section>
 		<div class="text-white">
 			<div class="row align-items-center justify-content-center">
 				<div class="col-8">
@@ -38,26 +38,9 @@
 				</div>
 			</div>
 		</div>
-	</main>
+	</section>
 </template>
 
 <style lang="scss" scoped>
-main {
-	background-image: url("src/assets/wallpaperflare.com_wallpaper(1).jpg");
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 100vh;
-	padding: 150px;
-	font-size: 20px;
-}
-
-.row {
-	height: 100%;
-}
-
-a {
-	text-decoration: none;
-	color: white;
-}
+@use "../styles/contact.scss";
 </style>

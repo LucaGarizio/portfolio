@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<AppHeader></AppHeader>
+		<NavBar></NavBar>
 
 		<router-view v-slot="{ Component }">
 			<transition name="grow-in" mode="out-in">
@@ -11,11 +11,11 @@
 </template>
 
 <script>
-import AppHeader from "./components/AppHeader.vue";
+import NavBar from "./components/NavBar.vue";
 
 export default {
 	components: {
-		AppHeader,
+		NavBar,
 	},
 };
 </script>

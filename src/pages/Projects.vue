@@ -1,5 +1,5 @@
 <template>
-	<main>
+	<section>
 		<div class="container-fluid" style="height: 100%">
 			<div
 				class="row gy-5 gy-md-3 justify-content-center justify-content-lg-evenly text-center align-items-center"
@@ -83,7 +83,7 @@
 				</div>
 			</div>
 		</div>
-	</main>
+	</section>
 </template>
 
 <script>
@@ -163,110 +163,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-main {
-	height: 100vh;
-	padding-top: 100px;
-	overflow-y: hidden;
-}
-.col-lg-5 {
-	height: 400px;
-}
-img {
-	height: 100%;
-	width: 100%;
-	max-height: 100%;
-	max-width: 100%;
-}
-.position-relative {
-	position: relative;
-}
-.overlay {
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	height: 100%;
-	width: 100%;
-	background-color: rgba(0, 0, 0, 0.7);
-	transition: opacity 1s ease;
-	opacity: 0;
-	cursor: pointer;
-}
-.overlay.visible {
-	opacity: 1;
-}
-.animation-container h2 {
-	transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
-}
-.overlay.visible .from-left {
-	opacity: 1;
-	transform: translateX(0);
-}
-.overlay.visible .from-right {
-	opacity: 1;
-	transform: translateX(0);
-}
-.from-left {
-	transform: translateX(-100%);
-}
-.from-right {
-	transform: translateX(100%);
-}
-.top {
-	animation: slide-in-up 3s forwards;
-}
-.bottom {
-	animation: slide-in-bottom 3s forwards;
-}
-.animation-container-2 {
-	width: 100%;
-	height: 100%;
-}
-@keyframes slide-in-up {
-	0% {
-		transform: translateY(-100%);
-	}
-	100% {
-		transform: translateY(0);
-	}
-}
-@keyframes slide-in-bottom {
-	0% {
-		transform: translateY(100%);
-	}
-	100% {
-		transform: translateY(0);
-	}
-}
-
-@media all and (max-width: 885px) {
-	.container-fluid {
-		width: 90%;
-	}
-	.overlay {
-		cursor: auto;
-	}
-	@keyframes slide-in-up {
-		0% {
-			transform: translateX(-100%);
-		}
-		100% {
-			transform: translateX(0);
-		}
-	}
-	@keyframes slide-in-bottom {
-		0% {
-			transform: translateX(100%);
-		}
-		100% {
-			transform: translateX(0);
-		}
-	}
-}
-
-@media all and (max-width: 429px) {
-	.col-lg-5 {
-		height: 270px;
-	}
-}
+@use "../styles/project.scss";
 </style>

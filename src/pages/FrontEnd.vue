@@ -1,5 +1,5 @@
 <template>
-	<main>
+	<section>
 		<div
 			class="container-fluid d-flex align-items-center justify-content-center"
 			style="height: 100%"
@@ -21,12 +21,19 @@
 				:modules="modules"
 				class="mySwiper"
 			>
-				<swiper-slide v-for="(project, index) in store.projects" :key="index">
-					<img :src="project.image" :alt="project.title" />
+				<swiper-slide
+					v-for="(project, index) in store.projectsFront"
+					:key="index"
+				>
+					<router-link
+						:to="{ name: 'project', params: { name: project.name } }"
+					>
+						<img :src="project.image" :alt="project.title" />
+					</router-link>
 				</swiper-slide>
 			</swiper>
 		</div>
-	</main>
+	</section>
 </template>
 
 <script>
@@ -61,44 +68,6 @@ export default {
 };
 </script>
 
-<style scoped>
-main {
-	height: 100vh;
-	padding-top: 70px;
-}
-.my-swiper {
-	width: 100%;
-	height: 100%;
-}
-.swiper {
-	width: 100%;
-	padding-top: 50px;
-	padding-bottom: 50px;
-}
-
-img {
-	object-fit: contain;
-	height: 100%;
-	max-width: 100%;
-	max-height: 100%;
-}
-
-.swiper-slide {
-	background-position: center;
-	background-size: cover;
-	width: 400px;
-	height: 400px;
-}
-
-.swiper-slide img {
-	display: block;
-	width: 100%;
-}
-
-/* Aggiungi altre regole CSS qui per personalizzare la visualizzazione su tablet */
-@media (max-width: 820px) {
-	.swiper-slide {
-		width: 100%; /* Adatta la larghezza delle slide al 100% su tablet */
-	}
-}
+<style scoped lang="scss">
+@use "../styles/carousel.scss";
 </style>

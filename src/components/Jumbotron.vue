@@ -1,5 +1,5 @@
 <template>
-	<main>
+	<header>
 		<div class="container-fluid position-relative" style="height: 100%">
 			<div
 				class="overlay position-absolute top-0 start-0 w-100 h-100"
@@ -14,13 +14,13 @@
 						{{ displayedText }}
 					</h1>
 
-					<!-- <a v-if="showArrow" class="animated-arrow p-5" href="#content">
+					<a v-if="showArrow" class="animated-arrow p-5" href="#content">
 						<i class="fa-solid fa-caret-down text-white position-absolute"></i>
-					</a> -->
+					</a>
 				</div>
 			</div>
 		</div>
-	</main>
+	</header>
 </template>
 
 <script>
@@ -51,43 +51,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-main {
-	background-image: url("../assets/bg-image.jpeg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	font-size: 18px;
-	height: 100vh;
-	h1 {
-		font-size: 50px;
-		color: white;
-	}
-}
-
-.fa-solid {
-	bottom: 50px;
-	font-size: 40px;
-	animation: up-down 2s infinite ease-in-out;
-}
-
-@keyframes up-down {
-	50% {
-		bottom: 30px;
-	}
-	100% {
-		bottom: 50px;
-	}
-}
-.animated-arrow {
-	animation: fadeIn 1s forwards;
-}
-
-@keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
+@use "../styles/jumbotron.scss";
 </style>
