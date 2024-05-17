@@ -4,34 +4,32 @@ import { RouterLink } from 'vue-router';
 		<div class="container-fluid">
 			<div class="row justify-content-center align-items-center border">
 				<div class="col-12 col-lg-7 text-center px-5">
-					<h1>Chi sono</h1>
-					<p>Sono Luca, un appassionato aspirante sviluppatore web.</p>
-					<p>
-						Ti do il benvenuto nel mio portfolio, un luogo dove condivido il mio
-						percorso di apprendimento e le esperienze acquisite durante il mio
-						corso di sei mesi presso Boolean Career.
-					</p>
-					<p>
-						Questo portfolio rappresenta il mio viaggio nel mondo dello sviluppo
-						web, un percorso che mi ha portato a esplorare le varie
-						sfaccettature della programmazione e a mettere in pratica le mie
-						conoscenze attraverso una serie di progetti e esercizi.
-					</p>
-					<p>
-						Qui troverai una raccolta dei progetti che ho sviluppato, dai
-						semplici esercizi iniziali ai progetti più complessi che ho
-						affrontato nel corso del mio percorso formativo. Ogni progetto è
-						stato un'opportunità per mettere alla prova le mie abilità e
-						imparare nuove tecnologie e metodologie. Attraverso questo
-						portfolio, voglio condividere con te il mio impegno e la mia
-						passione per lo sviluppo web.
-					</p>
-					<p>
-						Spero che tu possa trovare ispirazione e vedere il mio potenziale
-						come sviluppatore. Non vedo l'ora di condividere con te il mio
-						lavoro e di continuare a crescere professionalmente in questo
-						affascinante campo.
-					</p>
+					<h1>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
+						quaerat similique! Soluta sed praesentium expedita? Adipisci soluta
+						quod qui officia, sunt suscipit cumque eaque, cupiditate accusantium
+						maxime aliquid hic similique? Aspernatur hic fugit quidem
+						perspiciatis ipsum voluptate fugiat iure beatae. Voluptates tempore
+						voluptate dolor rem natus illo sapiente, ipsa hic ducimus commodi
+						consequatur. Eos facilis doloremque minus vitae ipsam tenetur
+						corrupti cum ipsa accusamus autem, adipisci facere dolorum
+						exercitationem neque voluptatum quaerat porro laudantium architecto?
+						Sunt non reiciendis, voluptas debitis fugiat ad velit iste qui! Vel
+						facilis quibusdam quae nostrum dolores exercitationem amet! Dolor
+						fugiat culpa reiciendis quis doloremque possimus ratione error
+						libero. Temporibus, omnis. Minus sint vel repudiandae deleniti
+						aliquid, corporis laborum quos ea rem commodi excepturi placeat
+						voluptatibus perferendis. Natus molestias ad quidem velit, culpa
+						fugit magnam saepe assumenda aliquid sequi, deleniti est officiis!
+						Voluptatibus quis earum harum provident rem, atque accusamus quaerat
+						obcaecati enim aliquam! Dicta, soluta cum sit repellat accusamus
+						fuga numquam perspiciatis qui voluptatibus error id odio recusandae
+						labore ipsum magni quae eius quod dolore unde rem consectetur ullam
+						voluptates cumque! Necessitatibus mollitia recusandae perferendis
+						doloribus rem provident eaque voluptatum ipsam! Blanditiis ea iste
+						recusandae ducimus natus dolor atque sequi inventore laboriosam
+						fugit, officiis minima.
+					</h1>
 				</div>
 				<div class="col-12 offset-lg-1 col-lg-4 hide">
 					<div class="card text-center d-flex justify-content-center">

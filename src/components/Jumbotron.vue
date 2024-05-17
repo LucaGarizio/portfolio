@@ -14,9 +14,9 @@
 						{{ displayedText }}
 					</h1>
 
-					<a v-if="showArrow" class="animated-arrow p-5" href="#content">
+					<!-- <a v-if="showArrow" class="animated-arrow p-5" href="#content">
 						<i class="fa-solid fa-caret-down text-white position-absolute"></i>
-					</a>
+					</a> -->
 				</div>
 			</div>
 		</div>
