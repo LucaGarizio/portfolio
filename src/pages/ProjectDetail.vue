@@ -2,7 +2,10 @@
 	<section>
 		<div class="container-fluid p-0">
 			<h1>{{ project.title }}</h1>
-			<img :src="project.image" :alt="project.title" />
+			<div
+				class="project-image"
+				:style="{ backgroundImage: 'url(' + project.image + ')' }"
+			></div>
 			<p>{{ project.description }}</p>
 		</div>
 	</section>
@@ -24,9 +27,10 @@ section {
 	height: 100vh;
 	padding-top: 60px;
 }
-img {
+.project-image {
 	width: 100%;
 	height: 500px;
-	object-fit: cover;
+	background-size: cover;
+	background-position-y: 0;
 }
 </style>

@@ -15,6 +15,11 @@ export const store = reactive({
 			name: "Boolflix",
 		},
 		{
+			image: "/boolzapp/boolzapp.png",
+			name: "Boolzapp",
+		},
+
+		{
 			image: "/maxcoach/maxcoach.png",
 			name: "Max Coach",
 		},

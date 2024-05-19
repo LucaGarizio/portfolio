@@ -48,34 +48,34 @@
 								class="animation-container-2 d-flex align-items-center justify-content-center"
 							>
 								<div
-									class="col-4 d-flex flex-row flex-md-column justify-content-center"
+									class="col-4 d-flex align-items-center flex-column justify-content-center"
 								>
-									<h2
-										v-for="(char, indexPhp) in displayedTextPhp"
+									<h4
+										v-for="(name, indexPhp) in displayedTextPhp"
 										:key="indexPhp"
 									>
-										{{ char }}
-									</h2>
+										{{ name }}
+									</h4>
 								</div>
 								<div
-									class="col-4 d-flex flex-row flex-md-column justify-content-center"
+									class="col-4 d-flex align-items-center flex-column justify-content-center"
 								>
-									<h2
-										v-for="(char, indexMySQL) in displayedTextMySQL"
+									<h4
+										v-for="(name, indexMySQL) in displayedTextMySQL"
 										:key="indexMySQL"
 									>
-										{{ char }}
-									</h2>
+										{{ name }}
+									</h4>
 								</div>
 								<div
-									class="col-4 d-flex flex-row flex-md-column justify-content-center"
+									class="col-4 d-flex align-items-center flex-column justify-content-center"
 								>
-									<h3
-										v-for="(char, indexLaravel) in displayedTextLaravel"
+									<h4
+										v-for="(name, indexLaravel) in displayedTextLaravel"
 										:key="indexLaravel"
 									>
-										{{ char }}
-									</h3>
+										{{ name }}
+									</h4>
 								</div>
 							</div>
 						</div>
@@ -103,12 +103,14 @@ export default {
 			indexPhp: 0,
 			indexMySQL: 0,
 			indexLaravel: 0,
+			cancelAnimation: false,
 		};
 	},
 	methods: {
 		showOverlay(column) {
 			this.visibility[column] = true;
 			if (column === "column2") {
+				this.cancelAnimation = false;
 				this.resetTypingPhp();
 				this.typeLetterPhp();
 				this.resetTypingMySQL();
@@ -120,9 +122,10 @@ export default {
 		hideOverlay(column) {
 			this.visibility[column] = false;
 			if (column === "column2") {
-				this.resetTypingPhp();
-				this.resetTypingMySQL();
-				this.resetTypingLaravel();
+				this.cancelAnimation = true;
+				this.deleteLetterPhp();
+				this.deleteLetterMySQL();
+				this.deleteLetterLaravel();
 			}
 		},
 		resetTypingPhp() {
@@ -138,24 +141,45 @@ export default {
 			this.indexLaravel = 0;
 		},
 		typeLetterPhp() {
-			if (this.indexPhp < this.textPhp.length) {
+			if (this.indexPhp < this.textPhp.length && !this.cancelAnimation) {
 				this.displayedTextPhp += this.textPhp.charAt(this.indexPhp);
 				this.indexPhp++;
 				setTimeout(this.typeLetterPhp, 300);
 			}
 		},
 		typeLetterMySQL() {
-			if (this.indexMySQL < this.textMySQL.length) {
+			if (this.indexMySQL < this.textMySQL.length && !this.cancelAnimation) {
 				this.displayedTextMySQL += this.textMySQL.charAt(this.indexMySQL);
 				this.indexMySQL++;
 				setTimeout(this.typeLetterMySQL, 300);
 			}
 		},
 		typeLetterLaravel() {
-			if (this.indexLaravel < this.textLaravel.length) {
+			if (
+				this.indexLaravel < this.textLaravel.length &&
+				!this.cancelAnimation
+			) {
 				this.displayedTextLaravel += this.textLaravel.charAt(this.indexLaravel);
 				this.indexLaravel++;
 				setTimeout(this.typeLetterLaravel, 300);
+			}
+		},
+		deleteLetterPhp() {
+			if (this.displayedTextPhp.length > 0 && this.cancelAnimation) {
+				this.displayedTextPhp = this.displayedTextPhp.slice(0, -1);
+				setTimeout(this.deleteLetterPhp, 300);
+			}
+		},
+		deleteLetterMySQL() {
+			if (this.displayedTextMySQL.length > 0 && this.cancelAnimation) {
+				this.displayedTextMySQL = this.displayedTextMySQL.slice(0, -1);
+				setTimeout(this.deleteLetterMySQL, 300);
+			}
+		},
+		deleteLetterLaravel() {
+			if (this.displayedTextLaravel.length > 0 && this.cancelAnimation) {
+				this.displayedTextLaravel = this.displayedTextLaravel.slice(0, -1);
+				setTimeout(this.deleteLetterLaravel, 300);
 			}
 		},
 	},

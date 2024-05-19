@@ -9,7 +9,7 @@
 				class="row justify-content-center align-items-center position-relative"
 				style="height: 100%"
 			>
-				<div class="col-8 text-center p-4">
+				<div class="col-12 text-center p-4">
 					<h1>
 						{{ displayedText }}
 					</h1>
