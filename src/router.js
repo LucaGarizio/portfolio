@@ -4,8 +4,8 @@ import Index from "./pages/Index.vue";
 import Projects from "./pages/Projects.vue";
 import FrontEnd from "./pages/FrontEnd.vue";
 import BackEnd from "./pages/BackEnd.vue";
-import Contact from "./pages/Contact.vue";
-import Info from "./pages/Info.vue";
+import Contact from "./components/Contact.vue";
+import Info from "./components/Info.vue";
 import ProjectDetails from "./pages/ProjectDetail.vue";
 
 // utilizzo funzione router

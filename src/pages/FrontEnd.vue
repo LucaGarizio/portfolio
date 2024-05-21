@@ -28,7 +28,7 @@
 					<router-link
 						:to="{ name: 'project', params: { name: project.name } }"
 					>
-						<img :src="project.image" :alt="project.title" />
+						<img :src="project.carouselImage" :alt="project.title" />
 					</router-link>
 				</swiper-slide>
 			</swiper>
